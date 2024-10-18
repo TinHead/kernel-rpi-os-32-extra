@@ -84,6 +84,7 @@ func run() error {
 		"--enable", "RFKILL",
 		"--enable", "CFG80211",
 		"--module", "BRCMFMAC",
+		"--module", "RT73USB",
 
 		// Bluetooth
 		"--enable", "NLMON",
