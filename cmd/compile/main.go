@@ -84,6 +84,9 @@ func run() error {
 		"--enable", "RFKILL",
 		"--enable", "CFG80211",
 		"--module", "BRCMFMAC",
+		"--enable", "USB_NET_DRIVERS",
+		"--enable", "WLAN_VENDOR_RALINK",
+		"--enable", "RT2X00",
 		"--module", "RT73USB",
 
 		// Bluetooth
@@ -145,7 +148,7 @@ func run() error {
 	if err := dockerRun(args...); err != nil {
 		return err
 	}
-	if err := dockerRun("make", "olddefconfig"); err != nil {
+	if err := dockerRun("make", "oldconfig"); err != nil {
 		return err
 	}
 
