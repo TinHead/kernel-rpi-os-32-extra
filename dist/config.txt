@@ -1,6 +1,6 @@
 # See https://www.raspberrypi.com/documentation/computers/config_txt.html
 
-enable_uart=0
+enable_uart=1
 
 kernel=vmlinuz
 
