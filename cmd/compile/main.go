@@ -61,7 +61,7 @@ func run() error {
 
 	// bcmrpi_defconfig: default raspberry pi config according to https://www.raspberrypi.com/documentation/computers/linux_kernel.html#cross-compiling-the-kernel
 	// mod2noconfig: disable all modules
-	if err := dockerRun("make", "bcmrpi_defconfig", "mod2noconfig"); err != nil {
+	if err := dockerRun("make", "bcmrpi_defconfig"); err != nil {
 		return err
 	}
 
@@ -86,7 +86,7 @@ func run() error {
 		"--module", "BRCMFMAC",
 		"--enable", "USB_NET_DRIVERS",
 		"--enable", "WLAN_VENDOR_RALINK",
-		"--enable", "RT2X00",
+		"--module", "RT2X00",
 		"--module", "RT73USB",
 
 		// Bluetooth
