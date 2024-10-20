@@ -55,6 +55,7 @@ func run() error {
 		return err
 	}
 	// change the owner of the files inside docker to the current user
+	
 	chown := func(folder string) error {
 		return dockerRun("chown", "-R", user.Uid+":"+user.Gid, folder)
 	}
