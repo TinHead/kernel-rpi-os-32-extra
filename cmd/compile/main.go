@@ -60,7 +60,7 @@ func run() error {
 	}
 
 	// bcmrpi_defconfig: default raspberry pi config according to https://www.raspberrypi.com/documentation/computers/linux_kernel.html#cross-compiling-the-kernel
-	// mod2noconfig: disable all modules
+	// mod2noconfig: disable all modules - weird things happen
 	if err := dockerRun("make", "bcmrpi_defconfig"); err != nil {
 		return err
 	}
