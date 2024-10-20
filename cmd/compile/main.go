@@ -59,11 +59,15 @@ func run() error {
 		return dockerRun("chown", "-R", user.Uid+":"+user.Gid, folder)
 	}
 
+	// copy and rename kernel
+	// if err = sh.Copy(filepath.Join("./linux-sources", ".config"), ".config"); err != nil {
+	// 	return err
+	// }
 	// bcmrpi_defconfig: default raspberry pi config according to https://www.raspberrypi.com/documentation/computers/linux_kernel.html#cross-compiling-the-kernel
 	// mod2noconfig: disable all modules - weird things happen
-	if err := dockerRun("make", "bcmrpi_defconfig"); err != nil {
-		return err
-	}
+	// if err := dockerRun("make", "bcmrpi_defconfig"); err != nil {
+	// return err
+	// }
 
 	// https://stackoverflow.com/a/56515886
 	// it doesn't check the validity of the .config file
