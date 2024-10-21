@@ -1,4 +1,4 @@
-module github.com/TinHead/kernel-rpi-os-32-extra
+module github.com/tinhead/kernel-rpi-os-32-extra
 
 go 1.18
 
