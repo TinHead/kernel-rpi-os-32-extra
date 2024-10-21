@@ -690,6 +690,7 @@ kernel/net/802/p8022.ko
 kernel/net/802/psnap.ko
 kernel/net/802/stp.ko
 kernel/net/802/garp.ko
+kernel/net/netlink/netlink_diag.ko
 kernel/net/netfilter/nfnetlink.ko
 kernel/net/netfilter/nfnetlink_acct.ko
 kernel/net/netfilter/nfnetlink_queue.ko
