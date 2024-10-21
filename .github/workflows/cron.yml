@@ -1,0 +1,61 @@
+name: Auto-update kernel
+
+on:
+  schedule:
+    # weekly, hour and minute chosen arbitrarily
+    - cron: "32 14 * * 1"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Check latest kernel version from https://archive.raspberrypi.org/debian/
+        id: check
+        run: |
+          # split lines to fail on exit != 0
+          sha="$(go run ./cmd/check-update/main.go)"
+          echo "sha=$sha" >> $GITHUB_OUTPUT
+
+      - name: Fetch latest kernel
+        if: steps.check.outputs.sha != ''
+        id: fetch
+        run: |
+          git submodule update --init
+          cd linux-sources
+          git fetch --depth=1 origin ${{steps.check.outputs.sha}}
+          git checkout ${{steps.check.outputs.sha}}
+
+          # split lines to fail on exit != 0
+          version="$(make kernelversion)"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          cd ..
+          git diff --no-ext-diff
+
+      - name: Compile latest kernel
+        if: steps.check.outputs.sha != ''
+        run: go run cmd/compile/main.go
+
+      - name: Show kernel config
+        if: steps.check.outputs.sha != ''
+        run: cat linux-sources/.config
+
+      - name: Commit the new kernel
+        if: steps.check.outputs.sha != ''
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: kernel ${{steps.fetch.outputs.version}}
+          # bump the version below and add a force-update file to release a new version
+          tagging_message: v1.0.4-${{steps.fetch.outputs.version}}
+
+      - name: Add blank commit regularly to keep cron alive (every 60 days)
+        uses: gautamkrishnar/keepalive-workflow@v1
+        with:
+          time_elapsed: 50
