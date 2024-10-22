@@ -310,7 +310,6 @@ kernel/drivers/spi/spi-bcm2835aux.ko
 kernel/drivers/spi/spi-bitbang.ko
 kernel/drivers/spi/spi-gpio.ko
 kernel/drivers/net/ipvlan/ipvlan.ko
-kernel/drivers/net/dummy.ko
 kernel/drivers/net/wireguard/wireguard.ko
 kernel/drivers/net/macvlan.ko
 kernel/drivers/net/mii.ko
@@ -319,16 +318,12 @@ kernel/drivers/net/phy/phylink.ko
 kernel/drivers/net/phy/libphy.ko
 kernel/drivers/net/phy/ax88796b.ko
 kernel/drivers/net/phy/fixed_phy.ko
-kernel/drivers/net/phy/microchip.ko
+kernel/drivers/net/phy/realtek.ko
 kernel/drivers/net/phy/smsc.ko
 kernel/drivers/net/mdio/fwnode_mdio.ko
 kernel/drivers/net/mdio/of_mdio.ko
 kernel/drivers/net/mdio/mdio-bitbang.ko
 kernel/drivers/net/tun.ko
-kernel/drivers/net/veth.ko
-kernel/drivers/net/vxlan/vxlan.ko
-kernel/drivers/net/nlmon.ko
-kernel/drivers/net/vrf.ko
 kernel/drivers/net/ethernet/smsc/smc91x.ko
 kernel/drivers/net/ethernet/smsc/smc911x.ko
 kernel/drivers/net/ethernet/smsc/smsc911x.ko
@@ -381,6 +376,10 @@ kernel/drivers/net/wireless/ralink/rt2x00/rt2500usb.ko
 kernel/drivers/net/wireless/ralink/rt2x00/rt73usb.ko
 kernel/drivers/net/wireless/ralink/rt2x00/rt2800usb.ko
 kernel/drivers/net/wireless/realtek/rtl818x/rtl8187/rtl8187.ko
+kernel/drivers/net/wireless/realtek/rtlwifi/rtlwifi.ko
+kernel/drivers/net/wireless/realtek/rtlwifi/rtl_usb.ko
+kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192c/rtl8192c-common.ko
+kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192cu/rtl8192cu.ko
 kernel/drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu.ko
 kernel/drivers/net/wireless/zydas/zd1211rw/zd1211rw.ko
 kernel/drivers/net/wireless/zydas/zd1201.ko
