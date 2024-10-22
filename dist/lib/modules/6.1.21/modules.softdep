@@ -1,3 +1,1 @@
 # Soft dependencies extracted from modules themselves.
-softdep arizona_i2c pre: arizona_ldo1
-softdep arizona_spi pre: arizona_ldo1
