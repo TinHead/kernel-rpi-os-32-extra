@@ -2,8 +2,6 @@ kernel/kernel/configs.ko:
 kernel/mm/z3fold.ko:
 kernel/fs/unicode/utf8data.ko:
 kernel/fs/binfmt_misc.ko:
-kernel/crypto/crypto_user.ko:
-kernel/crypto/cryptd.ko:
 kernel/drivers/pinctrl/pinctrl-mcp23s08_i2c.ko: kernel/drivers/pinctrl/pinctrl-mcp23s08.ko
 kernel/drivers/pinctrl/pinctrl-mcp23s08_spi.ko: kernel/drivers/pinctrl/pinctrl-mcp23s08.ko
 kernel/drivers/pinctrl/pinctrl-mcp23s08.ko:
@@ -323,10 +321,9 @@ kernel/drivers/bluetooth/btmrvl.ko: kernel/net/bluetooth/bluetooth.ko
 kernel/drivers/bluetooth/btmrvl_sdio.ko: kernel/drivers/bluetooth/btmrvl.ko kernel/net/bluetooth/bluetooth.ko
 kernel/drivers/bluetooth/btbcm.ko: kernel/net/bluetooth/bluetooth.ko
 kernel/drivers/bluetooth/btrtl.ko: kernel/net/bluetooth/bluetooth.ko
-kernel/net/l2tp/l2tp_ip.ko:
-kernel/net/l2tp/l2tp_eth.ko:
-kernel/net/l2tp/l2tp_ip6.ko: kernel/net/l2tp/l2tp_ip.ko
-kernel/net/mpls/mpls_gso.ko:
+kernel/net/wireless/lib80211.ko:
+kernel/net/wireless/lib80211_crypt_wep.ko: kernel/net/wireless/lib80211.ko
+kernel/net/wireless/lib80211_crypt_ccmp.ko: kernel/net/wireless/lib80211.ko
 kernel/net/bluetooth/bluetooth.ko:
 kernel/net/bluetooth/rfcomm/rfcomm.ko: kernel/net/bluetooth/bluetooth.ko
 kernel/net/bluetooth/bnep/bnep.ko: kernel/net/bluetooth/bluetooth.ko

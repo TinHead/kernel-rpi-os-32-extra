@@ -1,9 +1,6 @@
 # Aliases extracted from modules themselves.
 alias zpool-z3fold z3fold
 alias fs-binfmt_misc binfmt_misc
-alias net-pf-16-proto-21 crypto_user
-alias crypto-cryptd cryptd
-alias cryptd cryptd
 alias i2c:mcp23018 pinctrl_mcp23s08_i2c
 alias i2c:mcp23017 pinctrl_mcp23s08_i2c
 alias i2c:mcp23008 pinctrl_mcp23s08_i2c
@@ -4589,11 +4586,6 @@ alias sdio:c*v02DFd912A* btmrvl_sdio
 alias sdio:c*v02DFd911B* btmrvl_sdio
 alias sdio:c*v02DFd911A* btmrvl_sdio
 alias sdio:c*v02DFd9105* btmrvl_sdio
-alias net-pf-2-proto-IPPROTO_L2TP l2tp_ip
-alias net-pf-2-proto-2-type-IPPROTO_L2TP l2tp_ip
-alias net-l2tp-type-5 l2tp_eth
-alias net-pf-10-proto-IPPROTO_L2TP l2tp_ip6
-alias net-pf-10-proto-2-type-IPPROTO_L2TP l2tp_ip6
 alias net-pf-31 bluetooth
 alias bt-proto-3 rfcomm
 alias bt-proto-4 bnep
