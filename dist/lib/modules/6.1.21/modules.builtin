@@ -344,6 +344,8 @@ kernel/drivers/net/wireless/ath/ath.ko
 kernel/drivers/net/wireless/atmel/at76c50x-usb.ko
 kernel/drivers/net/wireless/broadcom/b43/b43.ko
 kernel/drivers/net/wireless/broadcom/b43legacy/b43legacy.ko
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko
 kernel/drivers/net/wireless/intersil/hostap/hostap.ko
 kernel/drivers/net/wireless/intersil/p54/p54common.ko
 kernel/drivers/net/wireless/intersil/p54/p54usb.ko
@@ -372,6 +374,12 @@ kernel/drivers/net/wireless/mediatek/mt76/mt7615/mt7663s.ko
 kernel/drivers/net/wireless/mediatek/mt76/mt7921/mt7921-common.ko
 kernel/drivers/net/wireless/mediatek/mt76/mt7921/mt7921s.ko
 kernel/drivers/net/wireless/mediatek/mt76/mt7921/mt7921u.ko
+kernel/drivers/net/wireless/ralink/rt2x00/rt2x00lib.ko
+kernel/drivers/net/wireless/ralink/rt2x00/rt2x00usb.ko
+kernel/drivers/net/wireless/ralink/rt2x00/rt2800lib.ko
+kernel/drivers/net/wireless/ralink/rt2x00/rt2500usb.ko
+kernel/drivers/net/wireless/ralink/rt2x00/rt73usb.ko
+kernel/drivers/net/wireless/ralink/rt2x00/rt2800usb.ko
 kernel/drivers/net/wireless/realtek/rtl818x/rtl8187/rtl8187.ko
 kernel/drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu.ko
 kernel/drivers/net/wireless/zydas/zd1211rw/zd1211rw.ko
@@ -690,7 +698,6 @@ kernel/net/802/p8022.ko
 kernel/net/802/psnap.ko
 kernel/net/802/stp.ko
 kernel/net/802/garp.ko
-kernel/net/netlink/netlink_diag.ko
 kernel/net/netfilter/nfnetlink.ko
 kernel/net/netfilter/nfnetlink_acct.ko
 kernel/net/netfilter/nfnetlink_queue.ko
